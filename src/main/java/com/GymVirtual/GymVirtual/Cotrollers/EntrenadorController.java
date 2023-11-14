@@ -19,13 +19,13 @@ public class EntrenadorController {
         entrenadorService.insetEntrenador(entrenadorModel);
     }
 
-    @GetMapping
-    public List<EntrenadorModel> getEntrenador(){
-        return entrenadorService.getEntrenador();
+    @PostMapping("seccion")
+    public EntrenadorModel getEntrenador(@RequestBody EntrenadorModel entrenadorModel){
+        return entrenadorService.getEntrenador(entrenadorModel);
     }
 
 
-    @GetMapping("login")
+    @PostMapping("login")
     public EntrenadorModel getLogin(@RequestBody EntrenadorModel entrenadorModel){
         return entrenadorService.getlogin(entrenadorModel);
     }

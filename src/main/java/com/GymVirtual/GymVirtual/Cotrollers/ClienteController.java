@@ -15,8 +15,8 @@ public class ClienteController {
     ClienteService clienteService;
 
 
-    @GetMapping
-    public List<ClienteModel> getClientes(){return clienteService.getClientes();}
+    @PostMapping("informacion")
+    public ClienteModel getClientes(@RequestBody ClienteModel clienteModel){return clienteService.getClientes(clienteModel);}
 
 
     @PostMapping
@@ -24,7 +24,7 @@ public class ClienteController {
         clienteService.insertCliente(clienteModel);
     }
 
-    @GetMapping("login")
+    @PostMapping("login")
     public ClienteModel getlogin(@RequestBody ClienteModel clienteModel){
        return clienteService.getlogin(clienteModel);
     }
@@ -33,4 +33,7 @@ public class ClienteController {
     public List<ClienteModel> getClienteOfEntrenador(@RequestBody ClienteModel clienteModel){
         return clienteService.getClienteOfEntrenador(clienteModel);
     }
+
+
+
 }

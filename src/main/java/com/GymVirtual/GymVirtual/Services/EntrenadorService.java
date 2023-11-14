@@ -19,8 +19,8 @@ public class EntrenadorService {
 
     }
 
-    public List<EntrenadorModel> getEntrenador(){
-        return (List<EntrenadorModel>) entrenadorRepository.findAll();
+    public EntrenadorModel getEntrenador(EntrenadorModel entrenadorModel){
+        return entrenadorRepository.findByIdEntrenador(entrenadorModel.getIdEntrenador());
     }
 
 

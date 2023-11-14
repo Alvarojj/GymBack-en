@@ -19,8 +19,8 @@ public class ClienteService {
     }
 
 
-    public List<ClienteModel> getClientes(){
-        return (List<ClienteModel>) clienteRepository.findAll();
+    public ClienteModel getClientes( ClienteModel clienteModel){
+        return clienteRepository.findByIdCliente(clienteModel.getIdCliente());
     }
 
 

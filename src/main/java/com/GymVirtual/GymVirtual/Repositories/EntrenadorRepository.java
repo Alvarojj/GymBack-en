@@ -7,4 +7,6 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface EntrenadorRepository extends JpaRepository<EntrenadorModel, Integer> {
     EntrenadorModel findByIdPersona_Correo(String correo);
+
+    EntrenadorModel findByIdEntrenador(int id);
 }

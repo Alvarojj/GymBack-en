@@ -14,6 +14,6 @@ public class MembresiaService {
 
 
     public List<MembresiaModel> getMembresias(){
-        return membresiaRepository.findAll();
+        return membresiaRepository.findByBinActivo(1);
     }
 }
