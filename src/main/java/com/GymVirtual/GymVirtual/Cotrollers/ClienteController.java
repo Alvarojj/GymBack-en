@@ -29,7 +29,7 @@ public class ClienteController {
        return clienteService.getlogin(clienteModel);
     }
 
-    @GetMapping("entrenador")
+    @PostMapping("entrenador")
     public List<ClienteModel> getClienteOfEntrenador(@RequestBody ClienteModel clienteModel){
         return clienteService.getClienteOfEntrenador(clienteModel);
     }

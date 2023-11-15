@@ -17,7 +17,7 @@ public class EntrenamientoController {
     }
 
 
-    @GetMapping("cliente")
+    @PostMapping("cliente")
     public EntrenamientoModel getEntrenoDia(@RequestBody EntrenamientoModel entrenamientoModel){
         return entrenamientoService.getEntrenoDia(entrenamientoModel);
     }

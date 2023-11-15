@@ -19,7 +19,7 @@ public class VideoController {
         videoService.insertVideo(video);
     }
 
-    @GetMapping
+    @PostMapping("Entrenador")
     public List<VideoModel> getVideos(@RequestBody EntrenadorModel entrenadorModel){
         return videoService.getVideos(entrenadorModel);
     }

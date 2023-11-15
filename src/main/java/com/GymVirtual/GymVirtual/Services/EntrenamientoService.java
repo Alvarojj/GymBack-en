@@ -6,6 +6,9 @@ import com.GymVirtual.GymVirtual.Repositories.EntrenamientoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 @Service
 public class EntrenamientoService {
     @Autowired
@@ -18,6 +21,10 @@ public class EntrenamientoService {
 
 
     public EntrenamientoModel getEntrenoDia(EntrenamientoModel entreno){
-        return entrenamientoRepository.findByFechaEntrenoAndAndCliente_IdCliente(entreno.getFechaEntreno(), entreno.getCliente().getIdCliente());
+
+        Date myDate = new Date();
+        String date = new SimpleDateFormat("yyyy-MM-dd").format(myDate);
+
+        return entrenamientoRepository.findByFechaEntrenoAndAndCliente_IdCliente(date, entreno.getCliente().getIdCliente());
     }
 }
