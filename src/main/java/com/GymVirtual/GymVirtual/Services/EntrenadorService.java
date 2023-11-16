@@ -37,6 +37,10 @@ public class EntrenadorService {
         return null;
     }
 
+    public List<EntrenadorModel> gerEntrenadores(){
+        return entrenadorRepository.findAll();
+    }
+
 
 
 }

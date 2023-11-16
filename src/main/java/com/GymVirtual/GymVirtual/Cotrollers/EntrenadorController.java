@@ -29,5 +29,10 @@ public class EntrenadorController {
     public EntrenadorModel getLogin(@RequestBody EntrenadorModel entrenadorModel){
         return entrenadorService.getlogin(entrenadorModel);
     }
+
+    @GetMapping
+    public List<EntrenadorModel> getEntrenadores(){
+        return entrenadorService.gerEntrenadores();
+    }
 }
 
